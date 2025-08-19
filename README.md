@@ -4,6 +4,12 @@ Een eenvoudige, lokale app om **tekst → video** te maken met automatische **Ne
 
 ## 🚀 Snel starten
 
+0) **Uitpakken**
+```bash
+unzip streamlit_text2video.zip
+cd streamlit_text2video
+```
+
 1) **Vereisten**
    - Python 3.10+
    - ffmpeg beschikbaar in je PATH
@@ -22,7 +28,7 @@ pip install -r requirements.txt
 
 3) **Run**
 ```bash
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 4) **Gebruik**
@@ -66,14 +72,8 @@ t2v fix-video --in model_out.mp4 --out fixed.mp4
 t2v thumbnail --in out.mp4 --out thumb.jpg
 ```
 
-## API
-Start de Streamlit-app (luistert op poort 3000):
-```bash
-npm start
-```
-
 ## Docker
 ```bash
 docker build -t text2video .
-docker run --rm -p 3000:3000 text2video
+docker run --rm -p 8501:8501 text2video
 ```
